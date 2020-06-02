@@ -9,6 +9,7 @@
         <field name="model">res.currency.rate.provider</field>
         <field name="arch" type="xml">
             <search string="Currency Rates Providers">
+  				<field name="name" />
                 <filter
                     name="active"
                     string="Archived"

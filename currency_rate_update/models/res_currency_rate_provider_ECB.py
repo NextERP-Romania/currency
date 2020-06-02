@@ -15,7 +15,7 @@ class ResCurrencyRateProviderECB(models.Model):
     _inherit = "res.currency.rate.provider"
 
     service = fields.Selection(selection_add=[("ECB", "European Central Bank")],
-                               ondelete={'ECB':lambda recs: recs.unlink()})
+                               ondelete={'ECB':'cascade'})
 
     def _get_supported_currencies(self):
         self.ensure_one()
